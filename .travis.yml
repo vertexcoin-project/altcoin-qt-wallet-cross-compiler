@@ -8,7 +8,7 @@ compiler:
 # edit here, Set Environment Variables
 env:
   global:
-    - WORKDIR=$TRAVIS_BUILD_DIR COIN_SRC="https://github.com/bulwark-crypto/Bulwark.git" COIN_NAME=$(basename "${COIN_SRC%.*}")
+    - WORKDIR=$TRAVIS_BUILD_DIR COIN_SRC="https://github.com/vertexcoin-project/vertexcoin.git" COIN_NAME=$(basename "${COIN_SRC%.*}")
 
   
 # Install dependencies
