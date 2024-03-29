@@ -10,7 +10,7 @@ echo "############ Compiling MXE ############"
 git clone https://github.com/mxe/mxe.git
 echo "$WORKDIR"
 
-cd "$WORKDIR"/mxe
+cd mxe
 make MXE_TARGETS="i686-w64-mingw32.static" boost
 make MXE_TARGETS="i686-w64-mingw32.static" qttools
 echo "############ Compiling MXE Done ############"
@@ -20,7 +20,7 @@ echo "############ Compiling Barkeley DB 4.8 ############"
 cd "$WORKDIR"
 wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
 tar -xzvf db-4.8.30.NC.tar.gz
-cd "$WORKDIR"/db-4.8.30.NC
+cd db-4.8.30.NC
   
 MXE_PATH="$WORKDIR"/mxe
 sed -i "s/WinIoCtl.h/winioctl.h/g" src/dbinc/win_db.h
@@ -45,7 +45,7 @@ echo "############ Compiling Mini UPNP ############"
 cd "$WORKDIR"
 wget http://miniupnp.free.fr/files/miniupnpc-1.6.20120509.tar.gz
 tar zxvf miniupnpc-1.6.20120509.tar.gz
-cd "$WORKDIR"/miniupnpc-1.6.20120509
+cd miniupnpc-1.6.20120509
 
 MXE_PATH="$WORKDIR"/mxe
 
